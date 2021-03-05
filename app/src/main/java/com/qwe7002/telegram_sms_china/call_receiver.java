@@ -83,7 +83,7 @@ public class call_receiver extends BroadcastReceiver {
                 }
                 String bot_token = sharedPreferences.getString("bot_token", "");
                 String chat_id = sharedPreferences.getString("chat_id", "");
-                String request_uri = network_func.get_url(bot_token, "sendMessage");
+                String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
                 final request_message request_body = new request_message();
                 request_body.chat_id = chat_id;
                 String dual_sim = other_func.get_dual_sim_card_display(context, slot, sharedPreferences.getBoolean("display_dual_sim_display_name", false));

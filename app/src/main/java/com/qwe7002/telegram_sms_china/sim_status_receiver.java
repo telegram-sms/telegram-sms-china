@@ -47,7 +47,7 @@ public class sim_status_receiver extends BroadcastReceiver {
         }
         String bot_token = sharedPreferences.getString("bot_token", "");
         String chat_id = sharedPreferences.getString("chat_id", "");
-        String request_uri = network_func.get_url(bot_token, "sendMessage");
+        String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Service.TELEPHONY_SERVICE);
         assert tm != null;
         int state = tm.getSimState();

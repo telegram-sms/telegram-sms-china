@@ -5,13 +5,13 @@
         android:layout_height="match_parent"
         tools:context=".main_activity">
 
-    <ImageView
+<!--    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="@dimen/alpha"
         android:scaleType="fitEnd"
         android:src="@drawable/character_set"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription" />-->
 
     <ScrollView
             android:layout_width="match_parent"
@@ -31,10 +31,11 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/API_address_editview"
+                    android:id="@+id/api_address_editview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="API地址"
+                    android:text="api.telegram.org"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:maxLines="1"

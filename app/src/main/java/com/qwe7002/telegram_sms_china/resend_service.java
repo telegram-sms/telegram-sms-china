@@ -82,7 +82,7 @@ public class resend_service extends Service {
         receiver = new stop_notify_receiver();
         registerReceiver(receiver, filter);
         SharedPreferences sharedPreferences = context.getSharedPreferences("data", MODE_PRIVATE);
-        request_uri = network_func.get_url(sharedPreferences.getString("bot_token", ""), "SendMessage");
+        request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), sharedPreferences.getString("bot_token", ""), "SendMessage");
         new Thread(() -> {
             resend_list = Paper.book().read(table_name, new ArrayList<>());
             while (true) {

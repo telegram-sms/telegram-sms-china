@@ -136,7 +136,7 @@ public class chat_command_service extends Service {
             assert callback_data != null;
             if (!callback_data.equals(CALLBACK_DATA_VALUE.SEND)) {
                 set_sms_send_status_standby();
-                String request_uri = network_func.get_url(bot_token, "editMessageText");
+                String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "editMessageText");
                 String dual_sim = other_func.get_dual_sim_card_display(context, slot, sharedPreferences.getBoolean("display_dual_sim_display_name", false));
                 String send_content = "[" + dual_sim + context.getString(R.string.send_sms_head) + "]" + "\n" + context.getString(R.string.to) + to + "\n" + context.getString(R.string.content) + content;
                 request_body.text = send_content + "\n" + context.getString(R.string.status) + context.getString(R.string.cancel_button);
@@ -336,7 +336,7 @@ public class chat_command_service extends Service {
                             request_message send_sms_request_body = new request_message();
                             send_sms_request_body.chat_id = chat_id;
                             send_sms_request_body.text = item;
-                            String request_uri = network_func.get_url(bot_token, "sendMessage");
+                            String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
                             String request_body_json = new Gson().toJson(send_sms_request_body);
                             RequestBody body = RequestBody.create(request_body_json, const_value.JSON);
                             Request request_obj = new Request.Builder().url(request_uri).method("POST", body).build();
@@ -459,7 +459,7 @@ public class chat_command_service extends Service {
             request_body.text = head + "\n" + result_send;
         }
 
-        String request_uri = network_func.get_url(bot_token, "sendMessage");
+        String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
         RequestBody body = RequestBody.create(new Gson().toJson(request_body), const_value.JSON);
         Request send_request = new Request.Builder().url(request_uri).method("POST", body).build();
         Call call = okhttp_client.newCall(send_request);
@@ -529,7 +529,7 @@ public class chat_command_service extends Service {
 
     private boolean get_me() {
         OkHttpClient okhttp_client_new = okhttp_client;
-        String request_uri = network_func.get_url(bot_token, "getMe");
+        String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "getMe");
         Request request = new Request.Builder().url(request_uri).build();
         Call call = okhttp_client_new.newCall(request);
         Response response;
@@ -601,7 +601,7 @@ public class chat_command_service extends Service {
                         .writeTimeout(http_timeout, TimeUnit.SECONDS)
                         .build();
                 Log.d(TAG, "run: Current timeout: " + timeout + "S");
-                String request_uri = network_func.get_url(bot_token, "getUpdates");
+                String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "getUpdates");
                 polling_json request_body = new polling_json();
                 request_body.offset = offset;
                 request_body.timeout = timeout;

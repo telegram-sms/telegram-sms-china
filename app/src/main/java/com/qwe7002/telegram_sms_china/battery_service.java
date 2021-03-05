@@ -42,6 +42,7 @@ public class battery_service extends Service {
     private battery_receiver battery_receiver = null;
     static long last_receive_time = 0;
     static long last_receive_message_id = -1;
+    static String api_address;
 
     private static ArrayList<send_obj> send_loop_list;
     @Override
@@ -61,6 +62,7 @@ public class battery_service extends Service {
         bot_token = sharedPreferences.getString("bot_token", "");
         doh_switch = sharedPreferences.getBoolean("doh_switch", true);
         boolean charger_status = sharedPreferences.getBoolean("charger_status", false);
+        api_address = sharedPreferences.getString("api_address", "");
         battery_receiver = new battery_receiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_BATTERY_OKAY);
@@ -99,9 +101,9 @@ public class battery_service extends Service {
         final request_message request_body = new request_message();
         request_body.chat_id = battery_service.chat_id;
         request_body.text = obj.content;
-        String request_uri = network_func.get_url(battery_service.bot_token, "sendMessage");
+        String request_uri = network_func.get_url(api_address, battery_service.bot_token, "sendMessage");
         if ((System.currentTimeMillis() - last_receive_time) <= 5000L && last_receive_message_id != -1) {
-            request_uri = network_func.get_url(bot_token, "editMessageText");
+            request_uri = network_func.get_url(api_address, bot_token, "editMessageText");
             request_body.message_id = last_receive_message_id;
             Log.d(TAG, "onReceive: edit_mode");
         }

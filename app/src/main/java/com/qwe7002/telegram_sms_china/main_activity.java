@@ -73,41 +73,6 @@ public class main_activity extends AppCompatActivity {
     private String privacy_police;
     private Context context;
 
-    private void check_version_upgrade(boolean reset_log) {
-        int version_code = Paper.book("system_config").read("version_code", 0);
-        PackageManager packageManager = context.getPackageManager();
-        PackageInfo packageInfo;
-        int current_version_code;
-        try {
-            packageInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
-            current_version_code = packageInfo.versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return;
-        }
-        if (version_code != current_version_code) {
-            if (reset_log) {
-                log_func.reset_log_file(context);
-            }
-            Paper.book("system_config").write("version_code", current_version_code);
-        }
-    }
-
-    private void update_config() {
-        int store_version = Paper.book("system_config").read("version", 0);
-        if (store_version == const_value.SYSTEM_CONFIG_VERSION) {
-            new com.qwe7002.telegram_sms_china.update_to_version1().check_error();
-            return;
-        }
-        //noinspection SwitchStatementWithTooFewBranches
-        switch (store_version) {
-            case 0:
-                new com.qwe7002.telegram_sms_china.update_to_version1().update();
-                break;
-            default:
-                Log.i(TAG, "update_config: Can't find a version that can be updated");
-        }
-    }
     @SuppressLint({"BatteryLife"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +83,7 @@ public class main_activity extends AppCompatActivity {
         Paper.init(context);
         sharedPreferences = getSharedPreferences("data", MODE_PRIVATE);
         privacy_police = "/guide/" + context.getString(R.string.Lang) + "/privacy-policy";
-
+        final EditText api_address_editview = findViewById(R.id.api_address_editview);
         final EditText chat_id_editview = findViewById(R.id.chat_id_editview);
         final EditText bot_token_editview = findViewById(R.id.bot_token_editview);
         final EditText trusted_phone_number_editview = findViewById(R.id.trusted_phone_number_editview);
@@ -148,8 +113,6 @@ public class main_activity extends AppCompatActivity {
         }
 
         if (sharedPreferences.getBoolean("initialized", false)) {
-            update_config();
-            check_version_upgrade(true);
             service_func.start_service(context, sharedPreferences.getBoolean("battery_monitoring_switch", false), sharedPreferences.getBoolean("chat_command", false));
 
         }
@@ -265,6 +228,10 @@ public class main_activity extends AppCompatActivity {
                 Snackbar.make(v, R.string.token_not_configure, Snackbar.LENGTH_LONG).show();
                 return;
             }
+            if (bot_token_editview.getText().toString().isEmpty()) {
+                Snackbar.make(v, R.string.token_not_configure, Snackbar.LENGTH_LONG).show();
+                return;
+            }
             new Thread(() -> service_func.stop_all_service(context)).start();
             final ProgressDialog progress_dialog = new ProgressDialog(main_activity.this);
             progress_dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -273,7 +240,7 @@ public class main_activity extends AppCompatActivity {
             progress_dialog.setIndeterminate(false);
             progress_dialog.setCancelable(false);
             progress_dialog.show();
-            String request_uri = network_func.get_url(bot_token_editview.getText().toString().trim(), "getUpdates");
+            String request_uri = network_func.get_url(api_address_editview.getText().toString().trim(), bot_token_editview.getText().toString().trim(), "getUpdates");
             OkHttpClient okhttp_client = network_func.get_okhttp_obj(doh_switch.isChecked(), Paper.book("system_config").read("proxy_config", new proxy()));
             okhttp_client = okhttp_client.newBuilder()
                     .readTimeout(60, TimeUnit.SECONDS)
@@ -402,7 +369,7 @@ public class main_activity extends AppCompatActivity {
             progress_dialog.setCancelable(false);
             progress_dialog.show();
 
-            String request_uri = network_func.get_url(bot_token_editview.getText().toString().trim(), "sendMessage");
+            String request_uri = network_func.get_url(api_address_editview.getText().toString().trim(), bot_token_editview.getText().toString().trim(), "sendMessage");
             request_message request_body = new request_message();
             request_body.chat_id = chat_id_editview.getText().toString().trim();
             request_body.text = getString(R.string.system_message_head) + "\n" + getString(R.string.success_connect);
@@ -446,8 +413,8 @@ public class main_activity extends AppCompatActivity {
                         Paper.book().destroy();
                     }
                     Paper.book("system_config").write("version", const_value.SYSTEM_CONFIG_VERSION);
-                    check_version_upgrade(false);
                     SharedPreferences.Editor editor = sharedPreferences.edit().clear();
+                    editor.putString("api_address", api_address_editview.getText().toString().trim());
                     editor.putString("bot_token", new_bot_token);
                     editor.putString("chat_id", chat_id_editview.getText().toString().trim());
                     if (trusted_phone_number_editview.getText().toString().trim().length() != 0) {

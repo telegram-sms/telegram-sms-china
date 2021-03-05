@@ -54,11 +54,11 @@ public class sms_send_receiver extends BroadcastReceiver {
         String chat_id = sharedPreferences.getString("chat_id", "");
         final request_message request_body = new request_message();
         request_body.chat_id = chat_id;
-        String request_uri = network_func.get_url(bot_token, "sendMessage");
+        String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
         long message_id = extras.getLong("message_id");
         if (message_id != -1) {
             Log.d(TAG, "Find the message_id and switch to edit mode.");
-            request_uri = network_func.get_url(bot_token, "editMessageText");
+            request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "editMessageText");
             request_body.message_id = message_id;
         }
         String result_status = "Unknown";
