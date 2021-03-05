@@ -1,4 +1,4 @@
-# Telegram SMS
+# Telegram SMS China
 
 <p align="center">
 <img src="https://vip1.loli.net/2020/09/28/PzWnqVZgcbE7wCv.png" alt="Telegram SMS">
@@ -113,15 +113,6 @@ The creation of this APP would not be possible without the help from the followi
 
 I would also like to thank the following people for their hard work to localise this project:
 
-- English
-  - [@tangbao](https://github.com/tangbao)
-  - [@jixunmoe](https://github.com/jixunmoe) ([Donate](https://paypal.me/jixun))
-- Japanese
-  - [@Lollycc](https://github.com/lollycc)
-  - [@AisakaMk2](https://github.com/AisakaMk2)
-  - [@Qiaogun](https://github.com/Qiaogun)
-- Spanish
-  - [@David Alonso](https://github.com/lpdavidgc)
 - Chinese(Traditional)
   - [@lm902](https://github.com/lm902)
   - [@孟武尼德霍格龍](https://github.com/tony8077616)
