@@ -47,10 +47,10 @@ public class sms_func {
         SharedPreferences sharedPreferences = context.getSharedPreferences("data", Context.MODE_PRIVATE);
         String bot_token = sharedPreferences.getString("bot_token", "");
         String chat_id = sharedPreferences.getString("chat_id", "");
-        String request_uri = network_func.get_url(bot_token, "sendMessage");
+        String request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "sendMessage");
         if (message_id != -1) {
             Log.d("send_sms", "Find the message_id and switch to edit mode.");
-            request_uri = network_func.get_url(bot_token, "editMessageText");
+            request_uri = network_func.get_url(sharedPreferences.getString("api_address", ""), bot_token, "editMessageText");
         }
         request_message request_body = new request_message();
         request_body.chat_id = chat_id;
