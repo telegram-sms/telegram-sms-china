@@ -8,8 +8,8 @@ cache:
         - .gradle/
 
 variables:
-    OWNER: telegram-sms
-    REPO: telegram-sms
+    OWNER: Fusion-SMS
+    REPO: telegram-sms-china
     KEYSTORE_SERVER: keystore.git.reallct.uk
 
 release_github:
@@ -59,7 +59,6 @@ build_release:
         - export GRADLE_USER_HOME=$(pwd)/.gradle && mkdir -p ${GRADLE_USER_HOME}
         - echo -e "org.gradle.jvmargs=-Xmx1536m\n org.gradle.parallel=true" >> ${GRADLE_USER_HOME}/gradle.properties
         - chmod +x ./gradlew
-        - ./gradlew app:copy_language_pack
         - ./gradlew assembleReleas
     artifacts:
         paths:
