@@ -124,7 +124,7 @@ public class main_activity extends AppCompatActivity {
             }
             display_dual_sim_display_name_switch.setChecked(display_dual_sim_display_name_config);
         }
-
+        api_address_editview.setText(sharedPreferences.getString("api_address", "api.telegram.org"));
         bot_token_editview.setText(bot_token_save);
         chat_id_editview.setText(chat_id_save);
         trusted_phone_number_editview.setText(sharedPreferences.getString("trusted_phone_number", ""));
