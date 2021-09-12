@@ -14,7 +14,6 @@ import com.google.zxing.BarcodeFormat;
 import com.qwe7002.telegram_sms_china.value.const_value;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class scanner_activity extends Activity {
