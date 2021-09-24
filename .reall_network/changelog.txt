@@ -1,1 +1,1 @@
-- Fix API address UI error
+- 修复扫码故障，修改扫码库
