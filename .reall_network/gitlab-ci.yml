@@ -8,7 +8,7 @@ cache:
         - .gradle/
 
 variables:
-    OWNER: Fusion-SMS
+    OWNER: telegram-sms
     REPO: telegram-sms-china
     KEYSTORE_SERVER: keystore.git.reallct.uk
 
