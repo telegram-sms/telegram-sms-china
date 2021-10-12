@@ -39,12 +39,6 @@
 
         <service android:name="com.qwe7002.telegram_sms_china.resend_service" />
 
-        <receiver android:name="com.qwe7002.telegram_sms_china.sim_status_receiver">
-            <intent-filter>
-                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name="com.qwe7002.telegram_sms_china.notify_apps_list_activity"
             android:windowSoftInputMode="adjustPan" />
@@ -52,7 +46,8 @@
         <service
             android:name="com.qwe7002.telegram_sms_china.notification_listener_service"
             android:label="@string/app_name"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
@@ -81,7 +76,8 @@
             </intent-filter>
         </service>
 
-        <receiver android:name="com.qwe7002.telegram_sms_china.boot_receiver">
+        <receiver android:name="com.qwe7002.telegram_sms_china.boot_receiver"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
@@ -111,7 +107,8 @@
                 <data android:mimeType="application/vnd.wap.mms-message" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.qwe7002.telegram_sms_china.call_receiver">
+        <receiver android:name="com.qwe7002.telegram_sms_china.call_receiver"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.SUBSCRIPTION_PHONE_STATE" />
@@ -126,7 +123,8 @@
         <activity
             android:name="com.qwe7002.telegram_sms_china.main_activity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

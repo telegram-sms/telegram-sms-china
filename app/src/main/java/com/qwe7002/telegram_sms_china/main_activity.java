@@ -114,7 +114,6 @@ public class main_activity extends AppCompatActivity {
 
         if (sharedPreferences.getBoolean("initialized", false)) {
             service_func.start_service(context, sharedPreferences.getBoolean("battery_monitoring_switch", false), sharedPreferences.getBoolean("chat_command", false));
-
         }
         boolean display_dual_sim_display_name_config = sharedPreferences.getBoolean("display_dual_sim_display_name", false);
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
@@ -500,6 +499,7 @@ public class main_activity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case 0:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -508,6 +508,7 @@ public class main_activity extends AppCompatActivity {
                     return;
                 }
                 Intent intent = new Intent(context, scanner_activity.class);
+                //noinspection deprecation
                 startActivityForResult(intent, 1);
                 break;
             case 1:
