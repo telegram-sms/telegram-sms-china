@@ -52,9 +52,6 @@
     <string name="get_recent_chat_message">請傳送一些訊息到機器人。</string>
     <string name="get_recent_chat_title">獲取最近的對話…</string>
     <string name="using_doh">使用DNS over HTTPS</string>
-    <string name="sim_card_insert">SIM卡被插入。</string>
-    <string name="sim_card_remove">SIM卡被移除。</string>
-    <string name="sim_card_lock">SIM卡被锁定。</string>
     <string name="no_logs">無日誌。</string>
     <string name="charger_status">監控充電器狀態</string>
     <string name="using_verification_code_identification">驗證碼自動提取(Alpha)</string>
