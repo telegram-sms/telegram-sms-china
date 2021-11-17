@@ -62,9 +62,11 @@ Telegram-SMS 根据 [BSD 3-Clause License](https://get.telegram-sms.com/license)
 
 CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegram-sms/blob/master/codeauxlib-license/LICENSE) 获得许可。
 
-作品使用全社会授权免费字体：【站酷庆科黄油体】(https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
+封面字体使用全社会授权免费字体：【站酷庆科黄油体】(https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
 
-作品版权属于[@walliant](https://www.pixiv.net/member.php?id=5600144)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
+人物形象作品版权属于[@walliant](https://www.pixiv.net/member.php?id=5600144)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
+
+封面形象作品版权属于[@木蔭の下@仕事募集中～](https://www.pixiv.net/users/6212984)
 
 封面作者：[@YJBeetle](https://github.com/yjbeetle)
 
