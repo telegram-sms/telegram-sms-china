@@ -62,11 +62,13 @@ Telegram-SMS 根据 [BSD 3-Clause License](https://get.telegram-sms.com/license)
 
 CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegram-sms/blob/master/codeauxlib-license/LICENSE) 获得许可。
 
-作品使用全社会授权免费字体：【站酷庆科黄油体】(https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
+人物形象原始设计与LOGO作品版权属于[@walliant](https://www.pixiv.net/member.php?id=5600144)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
 
-作品版权属于[@walliant](https://www.pixiv.net/member.php?id=5600144)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
+人物形象作品版权属于[@木蔭の下](https://www.pixiv.net/users/6212984)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
 
 封面作者：[@YJBeetle](https://github.com/yjbeetle)
+
+封面字体使用全社会授权免费字体：[站酷庆科黄油体](https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
 
 下载作品资源文件：[mega.nz](https://mega.nz/#F!TmwQSYjD!XN-uVfciajwy3okjIdpCAQ)
 
@@ -94,7 +96,8 @@ CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegra
 
 - [@SumiMakito](https://github.com/SumiMakito) ([捐助](https://paypal.me/makito))
 - [@zsxsoft](https://github.com/zsxsoft)
-- [@walliant](https://www.pixiv.net/member.php?id=5600144) ([微波](https://www.weibo.com/p/1005053186671274))
+- [@walliant](https://www.pixiv.net/member.php?id=5600144) ([微博](https://www.weibo.com/p/1005053186671274))
+- [@木蔭の下](https://www.pixiv.net/users/6212984)
 
 我还要感谢以下人员为本项目本地化所做的辛勤工作：
 
