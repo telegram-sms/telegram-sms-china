@@ -307,7 +307,7 @@ public class chat_command_service extends Service {
             case "/sendussd1":
             case "/sendussd2":
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                    //if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                         String[] command_list = request_msg.split(" ");
                         int sub_id = -1;
                         if (other_func.get_active_card(context) == 2) {
@@ -319,7 +319,7 @@ public class chat_command_service extends Service {
                             ussd_func.send_ussd(context, command_list[1], sub_id);
                             return;
                         }
-                    }
+                    //}
                 }
                 request_body.text = context.getString(R.string.system_message_head) + "\n" + getString(R.string.unknown_command);
                 break;
@@ -632,7 +632,7 @@ public class chat_command_service extends Service {
                         ++error_magnification;
                     }
                     try {
-                        Thread.sleep(sleep_time * 1000);
+                        Thread.sleep(sleep_time * 1000L);
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
                     }
