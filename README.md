@@ -75,7 +75,7 @@ CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegra
 设定集：
 
 - 姓名：澪
-- 属性：仿生人
+- 属性：机关人偶
 - 生日：2018 年 10 月 1 日
 - 出生地：中国福建
 - 星座：天秤座
