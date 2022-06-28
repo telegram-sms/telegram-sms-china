@@ -110,4 +110,5 @@
     <string name="cancel_button">取消</string>
     <string name="delete_button">刪除</string>
     <string name="send_button">發送</string>
+    <string name="api">API位址</string>
 </resources>
