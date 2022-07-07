@@ -72,14 +72,14 @@ CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegra
 
 下载作品资源文件：[mega.nz](https://mega.nz/#F!TmwQSYjD!XN-uVfciajwy3okjIdpCAQ)
 
-设定集：
+## 设定集
 
 - 姓名：澪
-- 属性：仿生人
-- 生日：2018 年 10 月 1 日
+- 属性：机关人偶
+- 生日：2021 年 3 月 29 日
 - 出生地：中国福建
-- 星座：天秤座
-- 习惯：吃甜食、女仆装、听重金属音乐
+- 星座：白羊座
+- 喜好：铁道迷，喜欢马卡龙
 
 ## 致谢
 
