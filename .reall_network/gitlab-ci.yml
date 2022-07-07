@@ -1,6 +1,7 @@
 stages:
     - build
-    - deploy
+    - push
+    - release
 cache:
     key: ${CI_PROJECT_ID}
     paths:
