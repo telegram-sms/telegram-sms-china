@@ -1,103 +1,89 @@
-# Telegram SMS
+# Telegram SMS China
+
+If you need the international version, please use [Telegram SMS](https://github.com/telegram-sms/telegram-sms)
 
 <p align="center">
-<img src="https://vip1.loli.net/2020/09/28/PzWnqVZgcbE7wCv.png" alt="Telegram SMS">
+<img src="https://vip1.static.reallct.com/2021/06/17/Dj1O9RMGAmEcsL4.png" alt="Telegram SMS">
 </p>
 
 ![Min Android Version](https://img.shields.io/badge/Min%20Android%20Version-5.1-orange.svg?style=flat-square)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?style=flat-square)](https://github.com/telegram-sms/telegram-sms/blob/master/LICENSE)
-[![GitHub Releases](https://img.shields.io/github/downloads/telegram-sms/telegram-sms/latest/app-release.apk?style=flat-square)](https://github.com/telegram-sms/telegram-sms/releases/latest)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fqwe7002%2Ftelegram-sms.svg?type=flat-square)](https://app.fossa.io/projects/git%2Bgithub.com%2Fqwe7002%2Ftelegram-sms?ref=badge_shield)
+[![GitHub Releases](https://img.shields.io/github/downloads/telegram-sms/telegram-sms-china/latest/app-release.apk?style=flat-square)](https://github.com/telegram-sms/telegram-sms-china/releases/latest)
 
-## We're in this together
+## 我们在一起
 
-> Fight COVID-19. Stay at home. Save lives.
+> 对抗 COVID-19。呆在家里。拯救生命。
 
-## News, Questions and Contributions
+## 新闻、问题和贡献
 
-**Because the XDA updates itself to XDA2021, XDA Labs has been closed. I am sorry for this and I can no longer provide the XDA Lab version of Telegram SMS. You can still use the GitHub version to update your Telegram SMS. If you request a refund, please contact me via qwe7002@hotmail.com**
+您可以关注 Telegram 频道 [Telegram SMS 更新日志](https://t.me/tg_sms_changelog) 以获取最新消息。
 
-You can follow the Telegram channel Telegram SMS Change Log for the latest news. [English](https://t.me/tg_sms_changelog_eng), [简体中文](https://t.me/tg_sms_changelog)
+**请访问 [https://reall.uk](https://reall.uk) 提交和讨论有关此项目的问题。**
 
-**Please visit [https://reall.uk](https://reall.uk) to submit and discuss issues regarding this project.**
+如果您想快速生成配置二维码，请访问[qrcode.telegram-sms.com](https://qrcode.telegram-sms.com)。
 
-**请访问 [https://reall.uk](https://reall.uk) 提交并讨论有关此项目的问题。**
+## 获得正确的版本
 
-The primary language used for commit messages is Simplified Chinese. However, you're welcome to use English in commit messages when making contributions.
+**警告**：所有发行版本都不能互相兼容（不是用同一个密钥签名的）！您必须先卸载旧的安装才能安装另一个，这将删除您的所有数据。
 
-If you want to generate the configuration QR code in a fast way, please visit [qrcode.telegram-sms.com](https://qrcode.telegram-sms.com).
+**不作任何明示或暗示的保证。使用风险自负！**
 
-## Get the Right Version
-
-**Warning**: All versions are not compatible (not signed by the same key)! You have to uninstall one first to install another, which will delete all your data.
-
-[Latest Release Download](https://github.com/telegram-sms/telegram-sms/releases/latest)
-
-[Pre-release Verison](https://github.com/qwe7002/telegram-sms) [Download](https://github.com/qwe7002/telegram-sms/actions?query=actor%3Areall-network+branch%3Anightly+is%3Asuccess+event%3Apush)
-
-**NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK!**
-
-[Telegram SMS compat](https://github.com/telegram-sms/telegram-sms-compat)
-
-Android 5.0 or lower? Click [![Github Release](https://img.shields.io/github/downloads/telegram-sms/telegram-sms-compat/latest/app-release.apk?style=flat-square)](https://github.com/telegram-sms/telegram-sms-compat/releases/latest) to download the latest and greatest.
+[最新版本下载](https://github.com/telegram-sms/telegram-sms-china/releases/latest)
 
 
-## Features
+## 功能
 
-- Forward SMS text messages to Telegram as a bot;
-- Notification regarding missed calls;
-- Notification regarding device battery power changes;
-- Remote control via chat command or SMS.
+- 将短信转发到 Telegram;
+- 未接来电通知;
+- 关于设备电池电量变化的通知;
+- 通过聊天命令或短信进行远程控制;
 
-## Permission
+## 权限
 
-This app requires following permissions to work properly:
+此应用程序需要以下权限才能正常工作：
 
-- SMS: To read and send text messages.
-- Phone: Check whether it is a dual SIM-Card phone, the SIM status and its identification digits.
-- Call phone: Execute the USSD code.
-- Call log: Read incoming numbers.
-- Camera: Scan the QR code and quickly enter the Bot Token.
-- Notification access: Listen for notification messages.
+- 短信：阅读和发送短信。
+- 手机：检查是否为双卡手机、SIM卡状态及识别码。
+- 拨打电话：执行 USSD 代码。
+- 通话记录：读取来电号码。
+- 相机：扫描二维码，快速输入Bot Token。
+- 通知访问：收听通知消息。
 
-You can set this APP as the default SMS APP, which will stop popping up SMS notifications and set all received SMS as "read" on the phone.
+您可以将此APP设置为默认短信APP，在手机上将停止弹出短信通知并将所有收到的短信设置为“已读”。
 
-## User Manual
+## 用户手册
 
-- [English](https://get.telegram-sms.com/wiki/User_manual)
 - [简体中文](https://get.telegram-sms.com/wiki/用户手册)
 - [繁體中文](https://get.telegram-sms.com/wiki/用戶手冊)
-- [日本語](https://get.telegram-sms.com/wiki/マニュアル)
 
-## Licenses
+## 许可证
 
-Telegram-SMS is licensed under [BSD 3-Clause License](https://get.telegram-sms.com/license).
+Telegram-SMS 根据 [BSD 3-Clause License](https://get.telegram-sms.com/license) 授权发行。
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fqwe7002%2Ftelegram-sms.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fqwe7002%2Ftelegram-sms?ref=badge_large)
+CodeauxLib 根据 [BSD 3-Clause License](https://github.com/telegram-sms/telegram-sms/blob/master/codeauxlib-license/LICENSE) 获得许可。
 
-CodeauxLib is licensed under [BSD 3-Clause License](https://github.com/telegram-sms/telegram-sms/blob/master/codeauxlib-license/LICENSE).
+人物形象原始设计与LOGO作品版权属于[@walliant](https://www.pixiv.net/member.php?id=5600144)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
 
-Artwork Use free fonts licensed by the whole society: [站酷庆科黄油体](https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
+人物形象作品版权属于[@木蔭の下](https://www.pixiv.net/users/6212984)。根据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 获得许可。
 
-Copyright of the artwork belongs to [@walliant](https://www.pixiv.net/member.php?id=5600144). Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+封面作者：[@YJBeetle](https://github.com/yjbeetle)
 
-Cover Author: [@YJBeetle](https://github.com/yjbeetle)
+封面字体使用全社会授权免费字体：[站酷庆科黄油体](https://www.zcool.com.cn/work/ZMTg5MDEyMDQ=.html)
 
-Download resource file of the artwork: [mega.nz](https://mega.nz/#F!TmwQSYjD!XN-uVfciajwy3okjIdpCAQ)
+下载作品资源文件：[mega.nz](https://mega.nz/#F!TmwQSYjD!XN-uVfciajwy3okjIdpCAQ)
 
-Character set：
+## 设定集
 
-- Name: Fay (菲, フェイ)
-- Birthday: 1st October, 2018
-- Place of birth: Fujian, China
-- Zodiac sign: Libra
-- Habits: Eat sweets, Maid dress, Listen Heavy metal music
+- 姓名：澪
+- 属性：机关人偶
+- 生日：2021 年 3 月 29 日
+- 出生地：中国福建
+- 星座：白羊座
+- 喜好：铁道迷，喜欢马卡龙
 
-Designed by Reall with love in Fujian, China
+## 致谢
 
-## Acknowledgements
-
-This APP uses the following open source libraries:
+本APP使用以下开源库:
 
 - [okhttp](https://github.com/square/okhttp)
 - [Gson](https://github.com/google/gson)
@@ -105,38 +91,31 @@ This APP uses the following open source libraries:
 - [Paper](https://github.com/pilgr/Paper)
 - [AwesomeQRCode](https://github.com/SumiMakito/AwesomeQRCode)
 
-The creation of this APP would not be possible without the help from the following people:
 
-- [@SumiMakito](https://github.com/SumiMakito) ([Donate](https://paypal.me/makito))
+如果没有以下人员的帮助，就不可能创建此应用程序：
+
+- [@SumiMakito](https://github.com/SumiMakito) ([捐助](https://paypal.me/makito))
 - [@zsxsoft](https://github.com/zsxsoft)
-- [@walliant](https://www.pixiv.net/member.php?id=5600144) ([weibo](https://www.weibo.com/p/1005053186671274))
+- [@walliant](https://www.pixiv.net/member.php?id=5600144) ([微博](https://www.weibo.com/p/1005053186671274))
+- [@木蔭の下](https://www.pixiv.net/users/6212984)
 
-I would also like to thank the following people for their hard work to localise this project:
+我还要感谢以下人员为本项目本地化所做的辛勤工作：
 
-- English
-  - [@tangbao](https://github.com/tangbao)
-  - [@jixunmoe](https://github.com/jixunmoe) ([Donate](https://paypal.me/jixun))
-- Japanese
-  - [@Lollycc](https://github.com/lollycc)
-  - [@AisakaMk2](https://github.com/AisakaMk2)
-  - [@Qiaogun](https://github.com/Qiaogun)
-- Spanish
-  - [@David Alonso](https://github.com/lpdavidgc)
-- Chinese(Traditional)
+- 繁体中文
   - [@lm902](https://github.com/lm902)
   - [@孟武尼德霍格龍](https://github.com/tony8077616)
 
-This APP uses the following public DNS service:
+本APP使用以下公共DNS服务：
 
 - [1.1.1.1](https://1.1.1.1/)
 
-And finally, [sm.ms](https://sm.ms) for hosting images used in this page.
+最后，[sm.ms](https://sm.ms) 用于托管此页面中使用的图像。
 
-## Buy me a cup of coffee to help maintain this project further?
+## 给我买杯咖啡来帮助进一步维护这个项目？
 
-- [via Github](https://get.telegram-sms.com/donate/github)
-- [via Paypal](https://get.telegram-sms.com/donate/paypal)
-- [via Bitcoin](bitcoin:17wmCCzy7hSSENnRBfUBMUSi7kdHYePrae) (**17wmCCzy7hSSENnRBfUBMUSi7kdHYePrae**)
-- [via UnionPay (中国银联云闪付)](https://get.telegram-sms.com/donate/unionpay)
+- [银联云闪付](https://get.telegram-sms.com/donate/unionpay)
+- [Github](https://get.telegram-sms.com/donate/github)
+- [Paypal](https://get.telegram-sms.com/donate/paypal)
+- [Bitcoin](bitcoin:17wmCCzy7hSSENnRBfUBMUSi7kdHYePrae) (**17wmCCzy7hSSENnRBfUBMUSi7kdHYePrae**)
 
-Your donation will make me work better for this project.
+您的捐赠将使我更好地为这个项目工作。
